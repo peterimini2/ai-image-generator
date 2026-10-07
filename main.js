@@ -1,4 +1,5 @@
 const themeToggle = document.querySelector(".theme-toggle");
+const promptInput = document.querySelector(".prompt-input");
 const promptBtn = document.querySelector(".prompt-btn");
 
 const examplePrompts = [
@@ -36,8 +37,11 @@ const toggleTheme = () => {
   themeToggle.querySelector("i").className = isDarkTheme ? "fa-solid fa-sun" : "fa-solid fa-moon";
 };
 
+// Fill prompt input with random example
 promptBtn.addEventListener("click", () => {
   const prompt = examplePrompts[Math.floor(Math.random() * examplePrompts.length)];
+  promptInput.value = prompt;
+  promptInput.focus();
 })
 
 themeToggle.addEventListener("click", toggleTheme);
