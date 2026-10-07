@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
   <link rel="stylesheet" href="main.css">
 </head>
-<body>
+<body class="dark-theme">
   <div class="container">
     <!-- Header -->
     <header class="header">
@@ -74,7 +74,12 @@
 
         <!-- Result Gallery -->
         <div class="gallery-grid">
-          <div class="img-card">
+          <div class="img-card loading">
+            <div class="status-container">
+              <div class="spinner"></div>
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <p class="status-text">Generating...</p>
+            </div>
             <img src="images/test.png" alt="" class="result-png">
             <div class="image-overlay">
               <button class="img-download-btn">
