@@ -7,6 +7,8 @@ const countSelect = document.getElementById("count-select");
 const ratioSelect = document.getElementById("ratio-select");
 const gridGallery = document.querySelector(".gallery-grid");
 
+// const API_KEY = 
+
 const examplePrompts = [
   "A magic forest with glowing plants and fairy homes among giant mushrooms",
   "An old steampunk airship floating through golden clouds at sunset",
@@ -42,6 +44,25 @@ const toggleTheme = () => {
   themeToggle.querySelector("i").className = isDarkTheme ? "fa-solid fa-sun" : "fa-solid fa-moon";
 };
 
+const generateImages = async (selectedModel, imageCount, aspectRatio, promptText) => {
+  const MODEL_URL = `https://router.huggingface.co/hf-inference/models/${selectedModel}`;
+
+  try {
+    const response = await fetch(MODEL_URL, {
+      headers: {
+        Authorization: `Bearer ${API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.blob();
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 // Create placeholder cards with loading spinners
 const createImageCards = (selectedModel, imageCount, aspectRatio, promptText) => {
   gridGallery.innerHTML = "";
@@ -56,6 +77,8 @@ const createImageCards = (selectedModel, imageCount, aspectRatio, promptText) =>
             <img src="images/test.png" alt="" class="result-img">
           </div>`;
   }
+
+  generateImages(selectedModel, imageCount, aspectRatio, promptText);
 }
 
 // Handle form submission
