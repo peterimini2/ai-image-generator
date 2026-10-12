@@ -94,11 +94,15 @@ body {
 }
 
 .task button {
-  background-color: #8052ec;
+  background-color: #e32b2b;
   color: #ffff;
-  height: 10%;
+  height: 100%;
   width: 40px;
   border-radius: 5px;
   cursor: pointer;
   outline: none;
+}
+
+.completed {
+  text-decoration: line-through;
 }
