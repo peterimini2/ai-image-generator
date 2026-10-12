@@ -352,3 +352,14 @@ body.dark-theme .container {
   text-align: center;
   color: var(--color-placeholder);
 }
+
+.next-page {
+  background-color: #ffff;
+  border: none;
+  border-radius: 20px;
+  color: #7d62bd;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 35rem;
+}

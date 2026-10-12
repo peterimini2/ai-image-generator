@@ -106,3 +106,19 @@ body {
 .completed {
   text-decoration: line-through;
 }
+
+.next-page {
+  background-color: #ffff;
+  border: none;
+  border-radius: 20px;
+  color: #7d62bd;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 30rem;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 60px;
+}
