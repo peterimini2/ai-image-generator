@@ -21,7 +21,7 @@ document.querySelector('#push').onclick = function () {
       for (var i = 0; i < current_tasks.length; i++) {
         current_tasks[i].onclick = function() {
           this.parentNode.remove();
-        }
+        } 
       }
 
     var tasks = document.querySelectorAll(".task");
