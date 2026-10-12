@@ -27,13 +27,24 @@ body {
   width: 100%;
   border-radius: 5px;
   text-align: right;
-}
-
-.display p {
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
-  font-weight: bold
+  font-weight: bold;
+  border: none;
 }
+
+.display:focus {
+  outline: none;
+  border: none;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
 
 .buttons-div {
  display: grid;
