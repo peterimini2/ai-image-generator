@@ -51,3 +51,13 @@ body {
   border: none;
   cursor: pointer;
 }
+
+.gray-btn {
+  background-color: rgb(110, 109, 109);
+  color: white;
+}
+
+.purple-btn {
+  background-color: #7d62bd;
+  color: white;
+}
