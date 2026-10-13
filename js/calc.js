@@ -10,12 +10,20 @@ const six = document.querySelector('.six');
 const one = document.querySelector('.one');
 const two = document.querySelector('.two');
 const three = document.querySelector('.three');
+const zero = document.querySelector('.zero');
+const dot = document.querySelector('.dot');
+const divideBtn = document.querySelector('.divide');
+const multiplyBtn = document.querySelector('.multiply');
+const minusBtn = document.querySelector('.minus');
+const plusBtn = document.querySelector('.add');
+const equalToBtn = document.querySelector('.equal');
+const percentBtn = document.querySelector('.percent');
 
 acBtn.addEventListener("click", () => {
   displayBox.value = "";
 })
 delBtn.addEventListener("click", () => {
-  displayBox.value = "";
+  displayBox.value = displayBox.value.slice(0, -1);
 })
 seven.addEventListener("click", () => {
   displayBox.value += Number(7);
@@ -43,4 +51,28 @@ two.addEventListener("click", () => {
 })
 three.addEventListener("click", () => {
   displayBox.value += Number(3);
+})
+zero.addEventListener("click", () => {
+  displayBox.value += Number(0);
+})
+dot.addEventListener("click", () => {
+  displayBox.value += ".";
+})
+divideBtn.addEventListener("click", () => {
+  displayBox.value += "/";
+})
+multiplyBtn.addEventListener("click", () => {
+  displayBox.value += "x";
+})
+minusBtn.addEventListener("click", () => {
+  displayBox.value += "-";
+})
+plusBtn.addEventListener("click", () => {
+  displayBox.value += "+";
+})
+// equalToBtn.addEventListener("click", () => {
+//   displayBox.value += "=";
+// })
+percentBtn.addEventListener("click", () => {
+  displayBox.value += "%";
 })
