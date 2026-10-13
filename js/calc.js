@@ -19,6 +19,8 @@ const plusBtn = document.querySelector('.add');
 const equalToBtn = document.querySelector('.equal');
 const percentBtn = document.querySelector('.percent');
 
+
+// Displaying numbers on calculator
 acBtn.addEventListener("click", () => {
   displayBox.value = "";
 })
@@ -62,7 +64,7 @@ divideBtn.addEventListener("click", () => {
   displayBox.value += "/";
 })
 multiplyBtn.addEventListener("click", () => {
-  displayBox.value += "x";
+  displayBox.value += "*";
 })
 minusBtn.addEventListener("click", () => {
   displayBox.value += "-";
@@ -70,9 +72,15 @@ minusBtn.addEventListener("click", () => {
 plusBtn.addEventListener("click", () => {
   displayBox.value += "+";
 })
-// equalToBtn.addEventListener("click", () => {
-//   displayBox.value += "=";
-// })
+
 percentBtn.addEventListener("click", () => {
   displayBox.value += "%";
+})
+
+equalToBtn.addEventListener("click", () => {
+  if (displayBox.value === "") {
+    displayBox.value = "Syntax error!";
+  } else {
+    displayBox.value = eval(displayBox.value);
+  }
 })
