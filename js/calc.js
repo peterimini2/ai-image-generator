@@ -84,3 +84,16 @@ equalToBtn.addEventListener("click", () => {
     displayBox.value = eval(displayBox.value);
   }
 })
+
+displayBox.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+
+    if (displayBox.value === "") {
+    displayBox.value = "Syntax error!";
+  } else {
+    displayBox.value = eval(displayBox.value);
+  }
+  };
+});
+
